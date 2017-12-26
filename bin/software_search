@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
 
+require "bundler/setup"
+require "software_search"
+
+# require_relative '../lib/software_search.rb'
+
 SoftwareSearch::CLI.new.call
