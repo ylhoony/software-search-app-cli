@@ -32,7 +32,7 @@ class SoftwareSearch::Category
       end
     else
       self.all.select do |category|
-        category.name.downcase.chr == alphabet
+        category.name.downcase.chr == alphabet.downcase
       end
     end
   end

@@ -70,10 +70,10 @@ class SoftwareSearch::CLI
   def restart?
     puts "Would you like to check other software? (Y/N)"
     answer = gets.strip
-    case answer
-    when "Y" || "y"
+    case answer.downcase
+    when "y"
       self.call
-    when "N" || "n"
+    when "n"
       exit
     else
       puts "I do not understand your answer"
