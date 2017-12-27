@@ -5,7 +5,9 @@ This Ruby CLI Gem provides you with the interface to search software categories 
 
 ## Installation
 
-  $ gem install software_search
+```ruby
+$ gem install software_search
+```
 
 ## Usage
 
