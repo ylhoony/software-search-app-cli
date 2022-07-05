@@ -2,7 +2,7 @@ class SoftwareSearch::Scraper
 
   def self.scrape_categories
     # scrape and create category objects
-    html = open("https://www.capterra.com/categories")
+    html = URI.open("https://www.capterra.com/categories")
     doc = Nokogiri::HTML(html)
     doc.css(".browse-group-list li a").each do |element|
       category = SoftwareSearch::Category.new
@@ -13,7 +13,7 @@ class SoftwareSearch::Scraper
 
   def self.scrape_software(category)
     # scrape and create software objects
-    html = open("https://www.capterra.com/#{category.slug}")
+    html = URI.open("https://www.capterra.com/#{category.slug}")
     doc = Nokogiri::HTML(html)
 
     doc.css(".listing").each do |element|
